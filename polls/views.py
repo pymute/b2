@@ -18,7 +18,7 @@ def get(request):
 def get_by_email(request):
     if request.method =='GET':
         try:
-            data = StudentModel.object.get(id=)
+            data = StudentModel.object.get(id=StudentSerializer)
         except StudentModel.DoesNotExist:
             return JsonResponse({'msg':'0'})
         return JsonResponse({'id':data.id,
